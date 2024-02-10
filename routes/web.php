@@ -2,9 +2,11 @@
 
 use App\Livewire\Admin\AdminDashboardComponent;
 use App\Livewire\CartComponent;
+use App\Livewire\CategoryComponent;
 use App\Livewire\CheckoutComponent;
 use App\Livewire\DetailsComponent;
 use App\Livewire\HomeComponent;
+use App\Livewire\SearchComponent;
 use App\Livewire\ShopComponent;
 use App\Livewire\User\UserDashboardComponent;
 use Illuminate\Support\Facades\Route;
@@ -25,7 +27,8 @@ Route::get('/shop', ShopComponent::class)->name('shop');
 Route::get('/cart', CartComponent::class)->name('product.cart');
 Route::get('/checkout', CheckoutComponent::class)->name('checkout');
 Route::get('/product/{slug}', DetailsComponent::class)->name('product.details');
-
+Route::get('/product-category/{category_slug}', CategoryComponent::class)->name('product.category');
+Route::get('/search', SearchComponent::class)->name('product.search');
 /* Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
