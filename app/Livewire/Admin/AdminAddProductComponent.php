@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Admin;
 
+use App\Http\Requests\ProductRequest;
 use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Support\Carbon;
@@ -37,8 +38,38 @@ class AdminAddProductComponent extends Component
         $this->slug = Str::slug($this->name,"-");
     }
 
+    public function updated($fields)
+    {
+        $this->validateOnly($fields, [
+            'name' => 'required|string',
+            'slug' => 'required|unique:products',
+            'short_description' => 'required|string',
+            'description' => 'required|string',
+            'regular_price' => 'required|numeric',
+            'sale_price' => 'numeric',
+            'SKU' => 'required|string',
+            'stock_status' => 'required|string',
+            'quantity' => 'required|numeric',
+            'image' => 'required|mimes:jpeg,png',
+            'category_id' => 'required|numeric'
+        ]);
+    }
+
     public function addProduct()
     {
+        $this->validate([
+            'name' => 'required|string',
+            'slug' => 'required|unique:products',
+            'short_description' => 'required|string',
+            'description' => 'required|string',
+            'regular_price' => 'required|numeric',
+            'sale_price' => 'numeric',
+            'SKU' => 'required|string',
+            'stock_status' => 'required|string',
+            'quantity' => 'required|numeric',
+            'image' => 'required|mimes:jpeg,png',
+            'category_id' => 'required|numeric'
+        ]);
         $product = new Product();
         $product->name = $this->name;
         $product->slug = $this->slug;
