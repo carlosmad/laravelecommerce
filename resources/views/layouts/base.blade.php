@@ -5,17 +5,17 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Home</title>	
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico">
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400italic,700,700italic,900,900italic&amp;subset=latin,latin-ext" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open%20Sans:300,400,400italic,600,600italic,700,700italic&amp;subset=latin,latin-ext" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/animate.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/font-awesome.min.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/owl.carousel.min.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/flexslider.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/chosen.min.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/color-01.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/animate.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/font-awesome.min.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/bootstrap.min.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/owl.carousel.min.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/flexslider.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/chosen.min.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/style.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/color-01.css') }}">
 	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css" integrity="sha512-WWc9iSr5tHo+AliwUnAQN1RfGK9AnpiOFbmboA0A0VJeooe69YR2rLgHw13KxF1bOSLmke+SNnLWxmZd8RTESQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.css" integrity="sha512-KRrxEp/6rgIme11XXeYvYRYY/x6XPGwk0RsIC6PyMRc072vj2tcjBzFmn939xzjeDhj0aDO7TDMd7Rbz3OEuBQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -49,12 +49,12 @@
 								<li class="menu-item" ><a title="Register or Login" href="login.html">Login</a></li>
 								<li class="menu-item" ><a title="Register or Login" href="register.html">Register</a></li>
 								<li class="menu-item lang-menu menu-item-has-children parent">
-									<a title="English" href="#"><span class="img label-before"><img src="{{ asset('assets/images/lang-en.png') }}" alt="lang-en"></span>English<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+									<a title="English" href="#"><span class="img label-before"><img src="{{ asset('/assets/images/lang-en.png') }}" alt="lang-en"></span>English<i class="fa fa-angle-down" aria-hidden="true"></i></a>
 									<ul class="submenu lang" >
-										<li class="menu-item" ><a title="hungary" href="#"><span class="img label-before"><img src="assets/images/lang-hun.png" alt="lang-hun"></span>Hungary</a></li>
-										<li class="menu-item" ><a title="german" href="#"><span class="img label-before"><img src="assets/images/lang-ger.png" alt="lang-ger" ></span>German</a></li>
-										<li class="menu-item" ><a title="french" href="#"><span class="img label-before"><img src="assets/images/lang-fra.png" alt="lang-fre"></span>French</a></li>
-										<li class="menu-item" ><a title="canada" href="#"><span class="img label-before"><img src="assets/images/lang-can.png" alt="lang-can"></span>Canada</a></li>
+										<li class="menu-item" ><a title="hungary" href="#"><span class="img label-before"><img src="/assets/images/lang-hun.png" alt="lang-hun"></span>Hungary</a></li>
+										<li class="menu-item" ><a title="german" href="#"><span class="img label-before"><img src="/assets/images/lang-ger.png" alt="lang-ger" ></span>German</a></li>
+										<li class="menu-item" ><a title="french" href="#"><span class="img label-before"><img src="/assets/images/lang-fra.png" alt="lang-fre"></span>French</a></li>
+										<li class="menu-item" ><a title="canada" href="#"><span class="img label-before"><img src="/assets/images/lang-can.png" alt="lang-can"></span>Canada</a></li>
 									</ul>
 								</li>
 								<li class="menu-item menu-item-has-children parent" >
@@ -136,7 +136,7 @@
 					<div class="mid-section main-info-area">
 
 						<div class="wrap-logo-top left-section">
-							<a href="index.html" class="link-to-home"><img src="assets/images/logo-top-1.png" alt="mercado"></a>
+							<a href="{{route('home')}}" class="link-to-home"><img src="/assets/images/logo-top-1.png" alt="mercado"></a>
 						</div>
 
 						@livewire('header-search-component')
@@ -343,7 +343,7 @@
 								<h3 class="item-header">We Using Safe Payments:</h3>
 								<div class="item-content">
 									<div class="wrap-list-item wrap-gallery">
-										<img src="assets/images/payment.png" style="max-width: 260px;">
+										<img src="/assets/images/payment.png" style="max-width: 260px;">
 									</div>
 								</div>
 							</div>
@@ -372,8 +372,8 @@
 								<div class="item-content">
 									<div class="wrap-list-item apps-list">
 										<ul>
-											<li><a href="#" class="link-to-item" title="our application on apple store"><figure><img src="assets/images/brands/apple-store.png" alt="apple store" width="128" height="36"></figure></a></li>
-											<li><a href="#" class="link-to-item" title="our application on google play store"><figure><img src="assets/images/brands/google-play-store.png" alt="google play store" width="128" height="36"></figure></a></li>
+											<li><a href="#" class="link-to-item" title="our application on apple store"><figure><img src="/assets/images/brands/apple-store.png" alt="apple store" width="128" height="36"></figure></a></li>
+											<li><a href="#" class="link-to-item" title="our application on google play store"><figure><img src="/assets/images/brands/google-play-store.png" alt="google play store" width="128" height="36"></figure></a></li>
 										</ul>
 									</div>
 								</div>
@@ -456,15 +456,15 @@
 		</div>
 	</footer>
 	
-	<script src="{{ asset('assets/js/jquery-1.12.4.minb8ff.js?ver=1.12.4') }}"></script>
-	<script src="{{ asset('assets/js/jquery-ui-1.12.4.minb8ff.js?ver=1.12.4') }}"></script>
-	<script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
-	<script src="{{ asset('assets/js/jquery.flexslider.js') }}"></script>
-	{{-- <script src="{{ asset('assets/js/chosen.jquery.min.js') }}"></script> --}}
-	<script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
-	<script src="{{ asset('assets/js/jquery.countdown.min.js') }}"></script>
-	<script src="{{ asset('assets/js/jquery.sticky.js') }}"></script>
-	<script src="{{ asset('assets/js/functions.js') }}"></script>
+	<script src="{{ asset('/assets/js/jquery-1.12.4.minb8ff.js?ver=1.12.4') }}"></script>
+	<script src="{{ asset('/assets/js/jquery-ui-1.12.4.minb8ff.js?ver=1.12.4') }}"></script>
+	<script src="{{ asset('/assets/js/bootstrap.min.js') }}"></script>
+	<script src="{{ asset('/assets/js/jquery.flexslider.js') }}"></script>
+	{{-- <script src="{{ asset('/assets/js/chosen.jquery.min.js') }}"></script> --}}
+	<script src="{{ asset('/assets/js/owl.carousel.min.js') }}"></script>
+	<script src="{{ asset('/assets/js/jquery.countdown.min.js') }}"></script>
+	<script src="{{ asset('/assets/js/jquery.sticky.js') }}"></script>
+	<script src="{{ asset('/assets/js/functions.js') }}"></script>
 	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js" integrity="sha512-GDey37RZAxFkpFeJorEUwNoIbkTwsyC736KNSYucu1WJWFK9qTdzYub8ATxktr6Dwke7nbFaioypzbDOQykoRg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
